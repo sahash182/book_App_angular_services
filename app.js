@@ -6,7 +6,6 @@ angular.module('bookApp', ['ngResource'])
     $scope.newBook = {};
 
     $scope.books = Book.query(); // returns all the books
-
     $scope.createBook = function(){
         Book.save($scope.newBook);
         $scope.newBook = {}; // clear new book object
